@@ -26,6 +26,9 @@ steps:
       #createLogFile: false # Optional
       #logFileVerbosity: 'normal' # Optional. Options: quiet, minimal, normal, detailed, diagnostic
 
+  - pwsh: |
+      Get-FileHash x64\Debug\SignmeDynamic.pdb
+
   - task: PublishSymbols@2
     inputs:
       #symbolsFolder: '$(Build.SourcesDirectory)' # Optional
@@ -41,3 +44,6 @@ steps:
       #symbolsProduct: # Optional
       #symbolsVersion: # Optional
       #symbolsArtifactName: 'Symbols_$(BuildConfiguration)' # Optional
+
+  - pwsh: |
+      Get-FileHash x64\Debug\SignmeDynamic.pdb
