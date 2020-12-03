@@ -45,7 +45,7 @@ steps:
       #symbolsProduct: # Optional
       #symbolsVersion: # Optional
       #symbolsArtifactName: 'Symbols_$(BuildConfiguration)' # Optional
-    condition: false
+    condition: true
 
   - pwsh: |
       Get-FileHash x64\Debug\SignmeDynamic.pdb
