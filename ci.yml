@@ -1,4 +1,5 @@
-pool: Office
+pool:
+  vmImage: windows-2019
 
 variables:
   - name: System.Debug
@@ -44,6 +45,7 @@ steps:
       #symbolsProduct: # Optional
       #symbolsVersion: # Optional
       #symbolsArtifactName: 'Symbols_$(BuildConfiguration)' # Optional
+    condition: false
 
   - pwsh: |
       Get-FileHash x64\Debug\SignmeDynamic.pdb
