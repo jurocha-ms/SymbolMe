@@ -1,5 +1,5 @@
-pool:
-  vmImage: windows-2019
+pool: Office
+  #vmImage: windows-2019
 
 variables:
   - name: System.Debug
