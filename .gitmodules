@@ -1,0 +1,3 @@
+[submodule "subme"]
+	path = deps/subme
+	url = ssh://jurocha-green:22/ado/p0/_git/subme
