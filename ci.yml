@@ -42,7 +42,7 @@ steps:
     inputs:
       pathToPublish: x64\Debug # '$(Build.ArtifactStagingDirectory)' 
       artifactName: pre
-    condition: true
+    condition: false
 
   - task: PublishSymbols@2
     inputs:
@@ -70,7 +70,7 @@ steps:
       #parallel: false # Optional
       #parallelCount: # Optional
       #fileCopyOptions: #Optional
-    condition: true
+    condition: false
 
   - pwsh: |
       Get-FileHash x64\Debug\*.pdb | Select-Object -Property Hash,Path
