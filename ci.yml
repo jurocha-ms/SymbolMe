@@ -55,5 +55,15 @@ steps:
       #symbolsArtifactName: 'Symbols_$(BuildConfiguration)' # Optional
     condition: true
 
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: x64\Debug # '$(Build.ArtifactStagingDirectory)' 
+      #artifactName: 'drop' 
+      #publishLocation: 'Container' # Options: container, filePath
+      #targetPath: # Required when publishLocation == FilePath
+      #parallel: false # Optional
+      #parallelCount: # Optional
+      #fileCopyOptions: #Optional
+
   - pwsh: |
       Get-FileHash x64\Debug\SignmeDynamic.pdb
