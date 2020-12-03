@@ -36,7 +36,7 @@ steps:
       #logFileVerbosity: 'normal' # Optional. Options: quiet, minimal, normal, detailed, diagnostic
 
   - pwsh: |
-      Get-FileHash x64\Debug\*.pdb
+      Get-FileHash x64\Debug\*.pdb | Select-Object -Property Hash,Path
 
   - task: PublishSymbols@2
     inputs:
@@ -66,4 +66,4 @@ steps:
       #fileCopyOptions: #Optional
 
   - pwsh: |
-      Get-FileHash x64\Debug\*.pdb
+      Get-FileHash x64\Debug\*.pdb | Select-Object -Property Hash,Path
