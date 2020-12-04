@@ -1,4 +1,4 @@
-pool: Office
+pool: jurocha-Win
   #vmImage: windows-2019
 
 variables:
