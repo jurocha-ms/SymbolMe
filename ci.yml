@@ -18,6 +18,10 @@ steps:
     inputs:
       versionSpec: 5.8.0
 
+  - task: NuGetCommand@2
+    inputs:
+      command: restore # Options: restore, pack, push, custom
+
   - task: MSBuild@1
     inputs:
       solution: signme.sln
